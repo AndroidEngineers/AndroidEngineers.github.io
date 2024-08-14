@@ -180,6 +180,151 @@ opacity:1;
 	transform: scale(1.1);
 }
 
+.store-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3DDC84;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.store-button:hover {
+    background-color: #16a085;
+    transform: translateY(-3px);
+}
+
+.store-button:active {
+    background-color: #149174;
+    transform: translateY(1px);
+}
+
+.store-button:focus {
+    outline: none;
+}
+
+/* Ensure services section is below the content-wrap */
+#services {
+    position: relative;
+    top: 100vh; /* Pushes the section below the entire viewport height */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Styles for the container and cards (as provided earlier) */
+#services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ff303c;
+    font-weight: 800;
+	text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive styles for Mobile */
+@media (max-width: 768px) {
+    .content-wrap {
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+        margin-bottom: 20px; /* Add some space below content-wrap */
+    }
+
+    #services {
+        position: static;
+        top: auto;
+        padding: 20px 10px;
+        margin-top: -20px; /* Bring the services section closer */
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+
+    #services h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #services {
+        padding: 20px 10px;
+        margin-top: -20px; /* Adjust margin to reduce the gap */
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .content-wrap {
+        margin-bottom: 10px; /* Less space below content-wrap on small screens */
+    }
+}
+
+
+/* Mobile-specific styles */
+@media (hover: none) {
+    .store-button {
+        transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    .store-button:active {
+        background-color: #149174;
+        transform: scale(0.98);
+    }
+}
+
 @media screen and (min-width:1200px) {
 	.content-wrap {
 		position: absolute;
