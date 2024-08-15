@@ -266,6 +266,59 @@ opacity:1;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+
+#jetpack-compose-roadmap {
+    position: relative;
+    top: 100vh; /* Pushes the section below the entire viewport height */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#jetpack-compose-roadmap .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#jetpack-compose-roadmap h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ff303c;
+    font-weight: 800;
+	text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+#jetpack-compose-roadmap .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#jetpack-compose-roadmap .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#jetpack-compose-roadmap .card ul li {
+    position: relative;
+    padding-left: 30px; /* Space for the custom bullet */
+    margin: 10px 0;
+}
+
+#jetpack-compose-roadmap .card ul li::before {
+    content: '\2022'; /* Unicode character for bullet */
+    font-size: 24px;
+    color: #073042; /* Change color as needed */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#jetpack-compose-roadmap .card ul ul {
+    margin-left: 20px;
+}
+
+
 /* Responsive styles for Mobile */
 @media (max-width: 768px) {
     .content-wrap {
@@ -277,6 +330,13 @@ opacity:1;
     }
 
     #services {
+        position: static;
+        top: auto;
+        padding: 20px 10px;
+        margin-top: -20px; /* Bring the services section closer */
+    }
+
+    #jetpack-compose-roadmap {
         position: static;
         top: auto;
         padding: 20px 10px;
@@ -299,6 +359,11 @@ opacity:1;
 
 @media (max-width: 480px) {
     #services {
+        padding: 20px 10px;
+        margin-top: -20px; /* Adjust margin to reduce the gap */
+    }
+
+    #jetpack-compose-roadmap {
         padding: 20px 10px;
         margin-top: -20px; /* Adjust margin to reduce the gap */
     }
